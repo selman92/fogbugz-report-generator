@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2035
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FogbugzReportGenerator", "FogbugzReportGenerator\FogbugzReportGenerator.csproj", "{BE3D3D63-66AE-4771-AEA9-2E90173D0270}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BE3D3D63-66AE-4771-AEA9-2E90173D0270}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE3D3D63-66AE-4771-AEA9-2E90173D0270}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE3D3D63-66AE-4771-AEA9-2E90173D0270}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE3D3D63-66AE-4771-AEA9-2E90173D0270}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {618AA955-58FD-470E-B25F-DC6A5B1846DB}
+	EndGlobalSection
+EndGlobal
