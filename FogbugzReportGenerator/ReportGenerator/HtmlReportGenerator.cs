@@ -11,9 +11,16 @@ namespace FogbugzReportGenerator.ReportGenerator
     {
         private const string CasesBaseUri = "https://msltd.fogbugz.com/f/cases/";
 
+        public string[] ExcludedWords { get; set; }
+
         public string Generate(IEnumerable<FogBugzCase> cases)
         {
             var builder = new StringBuilder();
+
+            if (ExcludedWords != null)
+            {
+                cases = cases.Where(_ => !ExcludedWords.Any(w => _.Title.IndexOf(w, StringComparison.InvariantCultureIgnoreCase) != -1));
+            }
 
             foreach (var fbCase in cases)
             {
@@ -28,6 +35,11 @@ namespace FogbugzReportGenerator.ReportGenerator
         public string Generate(IEnumerable<TimeInterval> intervals)
         {
             var builder = new StringBuilder();
+
+            if (ExcludedWords != null)
+            {
+                intervals = intervals.Where(_ => !ExcludedWords.Any(w => _.CaseTitle.IndexOf(w, StringComparison.InvariantCultureIgnoreCase) != -1));
+            }
 
             foreach (var interval in intervals.GroupBy(_ => _.CaseId).Select(_ => _.First()))
             {

@@ -75,6 +75,7 @@
     <Compile Include="ReportGenerator\HtmlReportGenerator.cs" />
     <Compile Include="ReportGenerator\IReportGenerator.cs" />
     <Compile Include="ReportGenerator\ReportGeneratorFactory.cs" />
+    <Compile Include="ReportType.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
