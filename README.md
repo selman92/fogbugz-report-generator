@@ -18,5 +18,5 @@ Currently two types of report are supported:
 
 A Manuscript API token is needed to use the program. You can follow the steps listed [here](http://help.fogcreek.com/12252/manuscript-api-token) to get a new token.
 
-Cases can be excluded based on their title. You must enter excluded words in a comma separated format. The words are **case-insensitive**.
+Cases can be excluded based on their title. You must enter excluded words in a comma separated format. The words are **case-insensitive**. All cases that contains any of the entered words will be excluded in the generated report.
 
