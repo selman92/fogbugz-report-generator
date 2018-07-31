@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using FogbugzReportGenerator.FogBugz;
 using FogbugzReportGenerator.ReportGenerator;
@@ -31,11 +32,12 @@ namespace FogbugzReportGenerator
             TxtExcludedWords.Text = Properties.Settings.Default.ExcludedWords;
         }
 
-        private void BtnVerifyClick(object sender, EventArgs e)
+        private async void BtnVerifyClick(object sender, EventArgs e)
         {
             var trimmedToken = TxtUserToken.Text.Trim();
 
-            if (_fogBugzClient.VerifyUserToken(trimmedToken))
+            var verifyResult = await Task.Run(() => _fogBugzClient.VerifyUserToken(trimmedToken));
+            if (verifyResult)
             {
                 _fogBugzClient.UserToken = trimmedToken;
 
@@ -43,7 +45,7 @@ namespace FogbugzReportGenerator
             }
         }
 
-        private void BtnGenerateReportClick(object sender, EventArgs e)
+        private async void BtnGenerateReportClick(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(Properties.Settings.Default.ExcludedWords))
             {
@@ -58,7 +60,8 @@ namespace FogbugzReportGenerator
                 var startDate = GetLatestMonday();
                 var endDate = startDate.AddDays(7);
 
-                var intervals = _fogBugzClient.GetIntervals(startDate, endDate);
+                var intervals = await Task.Run(() => _fogBugzClient.GetIntervals(startDate, endDate));
+                
                 var report = _reportGenerator.Generate(intervals);
 
                 BrwReport.DocumentText = report;
@@ -70,7 +73,7 @@ namespace FogbugzReportGenerator
 
             if ((int)RdGroupReportType.EditValue == (int)ReportType.ThisWeek)
             {
-                var cases = _fogBugzClient.GetCases(CurrentWeekFilter);
+                var cases = await Task.Run(() => _fogBugzClient.GetCases(CurrentWeekFilter));
 
                 var report = _reportGenerator.Generate(cases);
 
