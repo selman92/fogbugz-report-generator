@@ -13,6 +13,7 @@ For example:
 Currently two types of report are supported:
 
 -**This Week**: Lists all the cases that are assigned to the user in the current week's milestone.
+
 -**Last Week**: Lists all the cases that the user has logged time in, in the previous week.
 
 A Manuscript API token is needed to use the program. You can follow the steps listed [here](http://help.fogcreek.com/12252/manuscript-api-token) to get a new token.
