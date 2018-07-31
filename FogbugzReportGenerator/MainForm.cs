@@ -7,7 +7,7 @@ using FogbugzReportGenerator.ReportGenerator;
 
 namespace FogbugzReportGenerator
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
         private readonly IFogBugzClient _fogBugzClient;
 
@@ -15,7 +15,7 @@ namespace FogbugzReportGenerator
 
         private const string CurrentWeekFilter = @"assignedto:me milestonedate:""this week""";
 
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
 

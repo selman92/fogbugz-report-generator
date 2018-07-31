@@ -1,6 +1,6 @@
 ﻿namespace FogbugzReportGenerator
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.TxtUserToken = new System.Windows.Forms.TextBox();
             this.BtnVerify = new DevExpress.XtraEditors.SimpleButton();
@@ -205,7 +205,7 @@
             this.ClientSize = new System.Drawing.Size(677, 658);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Form1";
+            this.Name = "MainForm";
             this.Text = "FogBugz Report Generator";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1FormClosing);
             this.tableLayoutPanel1.ResumeLayout(false);
