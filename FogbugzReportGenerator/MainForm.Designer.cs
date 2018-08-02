@@ -51,7 +51,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 42.02532F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 57.97468F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 163F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 164F));
             this.tableLayoutPanel1.Controls.Add(this.TxtUserToken, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.BtnVerify, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.statusStrip1, 1, 5);
@@ -71,7 +71,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 472F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(677, 658);
@@ -80,7 +80,7 @@
             // TxtUserToken
             // 
             this.TxtUserToken.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TxtUserToken.Location = new System.Drawing.Point(219, 23);
+            this.TxtUserToken.Location = new System.Drawing.Point(218, 23);
             this.TxtUserToken.Name = "TxtUserToken";
             this.TxtUserToken.Size = new System.Drawing.Size(291, 20);
             this.TxtUserToken.TabIndex = 1;
@@ -90,9 +90,9 @@
             // 
             this.BtnVerify.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnVerify.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BtnVerify.Location = new System.Drawing.Point(516, 23);
+            this.BtnVerify.Location = new System.Drawing.Point(515, 23);
             this.BtnVerify.Name = "BtnVerify";
-            this.BtnVerify.Size = new System.Drawing.Size(158, 24);
+            this.BtnVerify.Size = new System.Drawing.Size(159, 24);
             this.BtnVerify.TabIndex = 3;
             this.BtnVerify.Text = "Verify";
             this.BtnVerify.Click += new System.EventHandler(this.BtnVerifyClick);
@@ -124,7 +124,7 @@
             this.labelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelControl1.Location = new System.Drawing.Point(3, 53);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(210, 24);
+            this.labelControl1.Size = new System.Drawing.Size(209, 24);
             this.labelControl1.TabIndex = 5;
             this.labelControl1.Text = "Report Type:";
             // 
@@ -138,7 +138,7 @@
             this.labelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelControl2.Location = new System.Drawing.Point(3, 23);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(210, 24);
+            this.labelControl2.Size = new System.Drawing.Size(209, 24);
             this.labelControl2.TabIndex = 7;
             this.labelControl2.Text = "User Token:";
             // 
@@ -150,16 +150,16 @@
             this.BrwReport.MinimumSize = new System.Drawing.Size(20, 20);
             this.BrwReport.Name = "BrwReport";
             this.tableLayoutPanel1.SetRowSpan(this.BrwReport, 2);
-            this.BrwReport.Size = new System.Drawing.Size(671, 486);
+            this.BrwReport.Size = new System.Drawing.Size(671, 488);
             this.BrwReport.TabIndex = 8;
             // 
             // BtnGenerateReport
             // 
             this.BtnGenerateReport.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnGenerateReport.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BtnGenerateReport.Location = new System.Drawing.Point(516, 83);
+            this.BtnGenerateReport.Location = new System.Drawing.Point(515, 83);
             this.BtnGenerateReport.Name = "BtnGenerateReport";
-            this.BtnGenerateReport.Size = new System.Drawing.Size(158, 24);
+            this.BtnGenerateReport.Size = new System.Drawing.Size(159, 24);
             this.BtnGenerateReport.TabIndex = 9;
             this.BtnGenerateReport.Text = "Generate Report";
             this.BtnGenerateReport.Click += new System.EventHandler(this.BtnGenerateReportClick);
@@ -174,14 +174,14 @@
             this.labelControl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelControl3.Location = new System.Drawing.Point(3, 83);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(210, 24);
+            this.labelControl3.Size = new System.Drawing.Size(209, 24);
             this.labelControl3.TabIndex = 10;
             this.labelControl3.Text = "Exclude Cases that contains:";
             // 
             // TxtExcludedWords
             // 
             this.TxtExcludedWords.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TxtExcludedWords.Location = new System.Drawing.Point(219, 83);
+            this.TxtExcludedWords.Location = new System.Drawing.Point(218, 83);
             this.TxtExcludedWords.Name = "TxtExcludedWords";
             this.TxtExcludedWords.Size = new System.Drawing.Size(291, 20);
             this.TxtExcludedWords.TabIndex = 11;
@@ -190,7 +190,7 @@
             // RdGroupReportType
             // 
             this.RdGroupReportType.EditValue = 0;
-            this.RdGroupReportType.Location = new System.Drawing.Point(219, 53);
+            this.RdGroupReportType.Location = new System.Drawing.Point(218, 53);
             this.RdGroupReportType.Name = "RdGroupReportType";
             this.RdGroupReportType.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem(0, "Last Week"),
@@ -198,7 +198,7 @@
             this.RdGroupReportType.Size = new System.Drawing.Size(291, 24);
             this.RdGroupReportType.TabIndex = 12;
             // 
-            // Form1
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;

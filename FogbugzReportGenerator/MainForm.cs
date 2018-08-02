@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DevExpress.XtraEditors;
 using FogbugzReportGenerator.FogBugz;
 using FogbugzReportGenerator.ReportGenerator;
 
@@ -47,6 +48,11 @@ namespace FogbugzReportGenerator
 
         private async void BtnGenerateReportClick(object sender, EventArgs e)
         {
+            if (!Verify())
+            {
+                return;
+            }
+
             if (!string.IsNullOrEmpty(Properties.Settings.Default.ExcludedWords))
             {
                 var words = Properties.Settings.Default.ExcludedWords.Split(new[] {','},
@@ -83,6 +89,26 @@ namespace FogbugzReportGenerator
 
                 LblStatus.Text = "Report has been generated and copied to clipboard!";
             }
+        }
+
+        private bool Verify()
+        {
+            if (string.IsNullOrEmpty(TxtUserToken.Text))
+            {
+                var dialogMessage = "Please enter user token.";
+
+                var messageBoxArgs = new XtraMessageBoxArgs
+                {
+                    Owner = this,
+                    Caption = "Error",
+                    Text = dialogMessage
+                };
+
+                XtraMessageBox.Show(messageBoxArgs);
+                return false;
+            }
+
+            return true;
         }
 
         private void TxtUserTokenTextChanged(object sender, EventArgs e)
