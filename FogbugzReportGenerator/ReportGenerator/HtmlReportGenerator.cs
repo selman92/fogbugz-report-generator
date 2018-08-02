@@ -9,7 +9,7 @@ namespace FogbugzReportGenerator.ReportGenerator
 {
     public class HtmlReportGenerator : IReportGenerator
     {
-        private const string CasesBaseUri = "https://msltd.fogbugz.com/f/cases/";
+        private const string CasesBaseUri = "https://msltd.manuscript.com/f/cases/";
 
         public string[] ExcludedWords { get; set; }
 
