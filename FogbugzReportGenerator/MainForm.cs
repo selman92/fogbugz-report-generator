@@ -72,7 +72,7 @@ namespace FogbugzReportGenerator
 
                 BrwReport.DocumentText = report;
 
-                Clipboard.SetText(report);
+                Clipboard.SetText(report, TextDataFormat.Html);
 
                 LblStatus.Text = "Report has been generated and copied to clipboard!";
             }
@@ -85,7 +85,7 @@ namespace FogbugzReportGenerator
 
                 BrwReport.DocumentText = report;
 
-                Clipboard.SetText(report);
+                Clipboard.SetText(report, TextDataFormat.Html);
 
                 LblStatus.Text = "Report has been generated and copied to clipboard!";
             }
